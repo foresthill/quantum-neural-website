@@ -1,0 +1,28 @@
+{
+  "name": "quantum-neural-website",
+  "version": "1.0.0",
+  "description": "Revolutionary IT company website with quantum-inspired design",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "serve": "python3 -m http.server 8000"
+  },
+  "dependencies": {
+    "three": "^0.160.0",
+    "gsap": "^3.12.4"
+  },
+  "devDependencies": {
+    "vite": "^5.0.10"
+  },
+  "keywords": [
+    "quantum",
+    "neural",
+    "website",
+    "3d",
+    "webgl"
+  ],
+  "author": "Quantum Neural Team",
+  "license": "MIT"
+}
