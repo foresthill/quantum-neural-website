@@ -8,6 +8,8 @@
 - **グラスモーフィズム/ニューモーフィズムUI**: 最先端のデザイントレンド
 - **PWA対応**: オフライン動作とアプリライクな体験
 - **高パフォーマンス**: 60fps最適化、Lighthouse Score 95+
+- **充実したコンテンツ**: ビジョン、会社概要、実績の各ページ
+- **統合ナビゲーション**: SPA風のスムーズな画面遷移
 
 ## セットアップ
 ```bash
@@ -35,13 +37,21 @@ npm run preview
 ```
 quantum-neural-website/
 ├── index.html          # メインHTML
+├── vision.html         # ビジョンページ
+├── about.html          # 会社概要ページ
+├── achievements.html   # 実績ページ
 ├── styles.css          # 基本スタイル
-├── css/style.css       # 追加スタイル
+├── about.css           # 会社概要ページスタイル
+├── about.js            # 会社概要ページスクリプト
+├── css/
+│   ├── style.css       # 追加スタイル
+│   └── achievements.css # 実績ページスタイル
 ├── scripts.js          # 基本インタラクション
 ├── js/
 │   ├── main.js         # Quantum Flow Universe
 │   ├── animations.js   # GSAP アニメーション
-│   └── performance.js  # パフォーマンス最適化
+│   ├── performance.js  # パフォーマンス最適化
+│   └── achievements.js # 実績ページ3D表示
 ├── public/
 │   ├── manifest.json   # PWA設定
 │   ├── service-worker.js
@@ -63,4 +73,4 @@ quantum-neural-website/
 
 ---
 プロジェクト作成: 2025-06-16
-最終更新: 2025-06-16
+最終更新: 2025-06-17
