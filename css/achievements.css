@@ -1,0 +1,615 @@
+/* Achievements Page - Glassmorphism & Holographic Styles */
+
+/* Hero Section */
+.achievements-hero {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-top: calc(var(--nav-height) + 4rem);
+  overflow: hidden;
+}
+
+.holographic-text {
+  background: linear-gradient(
+    45deg,
+    #00ffff,
+    #ff00ff,
+    #00ff00,
+    #ffff00,
+    #00ffff
+  );
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: holographic-shift 8s ease infinite;
+  text-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+}
+
+@keyframes holographic-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Quantum Canvas Background */
+#achievements-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+/* Loading Screen */
+.quantum-loader {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.quantum-loader .particle {
+  width: 15px;
+  height: 15px;
+  background: var(--primary);
+  border-radius: 50%;
+  animation: quantum-bounce 1.4s ease-in-out infinite;
+}
+
+.quantum-loader .particle:nth-child(2) {
+  animation-delay: 0.2s;
+  background: var(--secondary);
+}
+
+.quantum-loader .particle:nth-child(3) {
+  animation-delay: 0.4s;
+  background: var(--accent);
+}
+
+@keyframes quantum-bounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Floating Stats */
+.floating-stats {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 3rem;
+}
+
+.stat-orb {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 8px 32px rgba(0, 255, 255, 0.2),
+    inset 0 0 20px rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.stat-orb:hover {
+  transform: translateY(-10px);
+  box-shadow: 
+    0 15px 40px rgba(0, 255, 255, 0.4),
+    inset 0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  font-family: 'Orbitron', monospace;
+  color: var(--primary);
+  text-shadow: 0 0 20px currentColor;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Filter Section */
+.filter-section {
+  padding: 3rem 0;
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: sticky;
+  top: var(--nav-height);
+  z-index: 100;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.filter-controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  position: relative;
+  padding: 0.8rem 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  color: var(--light);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.filter-btn.active {
+  background: rgba(0, 255, 255, 0.2);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.btn-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Project Cards - Glassmorphism */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.project-card {
+  position: relative;
+  height: 400px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.project-icon {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1.5rem;
+}
+
+.icon-3d {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  border-radius: 20px;
+  animation: float-rotate 6s ease-in-out infinite;
+}
+
+@keyframes float-rotate {
+  0%, 100% { transform: translateY(0) rotateZ(0deg); }
+  50% { transform: translateY(-10px) rotateZ(5deg); }
+}
+
+.project-stats {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.project-stats span {
+  padding: 0.5rem 1rem;
+  background: rgba(0, 255, 255, 0.1);
+  border-radius: 20px;
+  font-size: 0.9rem;
+  border: 1px solid rgba(0, 255, 255, 0.3);
+}
+
+.tech-stack {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.tech-stack li {
+  padding: 0.3rem 0.8rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  font-size: 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Timeline Section */
+.timeline-section {
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.quantum-timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline-path {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100%;
+}
+
+.timeline-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.quantum-path {
+  fill: none;
+  stroke: url(#gradient);
+  stroke-width: 3;
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.5));
+}
+
+.timeline-events {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.timeline-event {
+  position: relative;
+  margin-bottom: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.timeline-event.right {
+  justify-content: flex-end;
+}
+
+.event-content {
+  width: 45%;
+  padding: 1.5rem;
+  border-radius: 15px;
+  position: relative;
+}
+
+.event-orb {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+  border-radius: 50%;
+  box-shadow: 
+    0 0 20px var(--primary),
+    inset 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.quantum-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--primary);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Awards Section */
+.awards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 3rem;
+  padding: 3rem 0;
+}
+
+.award-item {
+  display: flex;
+  justify-content: center;
+}
+
+.award-badge {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  transform-style: preserve-3d;
+}
+
+.holographic {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 255, 255, 0.1),
+    rgba(255, 0, 255, 0.1),
+    rgba(255, 255, 0, 0.1)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 2px solid transparent;
+  border-image: linear-gradient(
+    135deg,
+    #00ffff,
+    #ff00ff,
+    #ffff00,
+    #00ffff
+  ) 1;
+  border-radius: 50%;
+  box-shadow: 
+    0 0 30px rgba(0, 255, 255, 0.5),
+    inset 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.badge-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
+
+.badge-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.holographic-shimmer {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(
+    105deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.7) 50%,
+    transparent 60%
+  );
+  background-size: 200% 200%;
+  background-position: 0% 50%;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* Client Logos */
+.clients-section {
+  padding: 4rem 0;
+  overflow: hidden;
+}
+
+.clients-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.clients-track {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+.client-logo {
+  min-width: 200px;
+  height: 100px;
+  padding: 1.5rem;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.client-logo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+}
+
+.logo-placeholder {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'Orbitron', monospace;
+}
+
+/* Technical Achievements */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.achievement-card {
+  padding: 2rem;
+  text-align: center;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.achievement-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 255, 255, 0.2);
+}
+
+.achievement-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.achievement-card h3 {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  font-family: 'Orbitron', monospace;
+}
+
+/* CTA Section */
+.cta-section {
+  padding: 5rem 0;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 255, 255, 0.05),
+    rgba(255, 0, 255, 0.05)
+  );
+}
+
+.cta-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  margin-bottom: 1rem;
+}
+
+.cta-content p {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .floating-stats {
+    flex-direction: column;
+    gap: 1rem;
+    position: static;
+    margin-top: 2rem;
+  }
+  
+  .stat-orb {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .timeline-event {
+    flex-direction: column;
+  }
+  
+  .event-content {
+    width: 90%;
+    margin-top: 2rem;
+  }
+  
+  .timeline-event.right {
+    align-items: center;
+  }
+  
+  .awards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .achievement-card h3 {
+    font-size: 2rem;
+  }
+}
+
+/* Performance Optimizations */
+.reduced-motion .holographic-text,
+.reduced-motion .icon-3d,
+.reduced-motion .holographic-shimmer {
+  animation: none;
+}
+
+.reduced-motion .quantum-particle {
+  display: none;
+}
+
+/* Dark mode enhancements */
+@media (prefers-color-scheme: dark) {
+  .glassmorphism {
+    background: rgba(255, 255, 255, 0.03);
+  }
+  
+  .holographic {
+    box-shadow: 
+      0 0 40px rgba(0, 255, 255, 0.6),
+      inset 0 0 30px rgba(255, 255, 255, 0.2);
+  }
+}

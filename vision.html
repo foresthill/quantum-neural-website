@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ビジョン - Quantum Neural Corporation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .vision-hero {
+            min-height: 60vh;
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(255, 0, 255, 0.1) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .vision-content {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .vision-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .vision-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .vision-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 212, 255, 0.3);
+        }
+        
+        .vision-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .timeline {
+            position: relative;
+            padding: 60px 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, transparent, var(--primary-color), transparent);
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 80px;
+            position: relative;
+        }
+        
+        .timeline-content {
+            width: 45%;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: auto;
+        }
+        
+        .timeline-year {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--bg-color);
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: 2px solid var(--primary-color);
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">Quantum Neural</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">ホーム</a></li>
+                <li><a href="vision.html" class="nav-link active">ビジョン</a></li>
+                <li><a href="about.html" class="nav-link">会社概要</a></li>
+                <li><a href="achievements.html" class="nav-link">実績</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="vision-hero">
+        <div class="hero-content">
+            <h1 class="glitch-text" data-text="Our Vision">Our Vision</h1>
+            <p class="subtitle">量子的な革新で、デジタルの未来を創造する</p>
+        </div>
+    </section>
+
+    <section class="vision-content">
+        <div class="section-header">
+            <h2>私たちが描く未来</h2>
+            <p>テクノロジーと人類の調和が生み出す、新しい世界</p>
+        </div>
+
+        <div class="vision-grid">
+            <div class="vision-card">
+                <span class="vision-icon">🌌</span>
+                <h3>量子的思考の民主化</h3>
+                <p>量子コンピューティングの概念を日常のビジネスに応用し、誰もが複雑な問題を革新的に解決できる世界を実現します。</p>
+            </div>
+            <div class="vision-card">
+                <span class="vision-icon">🧠</span>
+                <h3>AI共生社会の構築</h3>
+                <p>人工知能と人間が協調し、それぞれの強みを活かして新たな価値を生み出す共生エコシステムを創造します。</p>
+            </div>
+            <div class="vision-card">
+                <span class="vision-icon">🌐</span>
+                <h3>境界のないデジタル世界</h3>
+                <p>物理的な制約を超えて、誰もがアクセスできる没入型デジタル体験を通じて、グローバルなつながりを深めます。</p>
+            </div>
+        </div>
+
+        <div class="section-header" style="margin-top: 100px;">
+            <h2>ロードマップ</h2>
+            <p>革新への道のり</p>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>量子インターフェースの標準化</h3>
+                    <p>直感的な量子的UIを開発し、業界標準として確立</p>
+                </div>
+                <div class="timeline-year">2025</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>ニューラルネットワーク統合</h3>
+                    <p>生体情報とAIの融合による次世代インタラクション</p>
+                </div>
+                <div class="timeline-year">2026</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>ホログラフィックWeb実装</h3>
+                    <p>3次元空間でのWeb体験を一般化</p>
+                </div>
+                <div class="timeline-year">2027</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>量子ネイティブ社会</h3>
+                    <p>量子的思考が日常化した新しい社会の実現</p>
+                </div>
+                <div class="timeline-year">2030</div>
+            </div>
+        </div>
+
+        <div class="cta-section" style="text-align: center; margin-top: 80px;">
+            <h3>未来を共に創造しましょう</h3>
+            <a href="index.html#contact" class="cta-button">お問い合わせ</a>
+        </div>
+    </section>
+
+    <script src="scripts.js"></script>
+    <script>
+        // Timeline animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.timeline-item').forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(50px)';
+            item.style.transition = 'all 0.8s ease';
+            observer.observe(item);
+        });
+    </script>
+</body>
+</html>

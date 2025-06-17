@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Quantum Neural - 実績とイノベーション">
+  <title>実績 | Quantum Neural</title>
+  
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/achievements.css">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div class="loading-screen">
+    <div class="quantum-loader">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+  </div>
+  
+  <!-- Quantum Background Canvas -->
+  <div id="achievements-canvas"></div>
+  
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo magnetic">
+        <a href="index.html">Quantum Neural</a>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link animated-link">Home</a></li>
+        <li><a href="index.html#about" class="nav-link animated-link">About</a></li>
+        <li><a href="index.html#services" class="nav-link animated-link">Services</a></li>
+        <li><a href="achievements.html" class="nav-link animated-link active">実績</a></li>
+        <li><a href="index.html#contact" class="nav-link animated-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <!-- Hero Section -->
+  <section class="achievements-hero">
+    <div class="container">
+      <h1 class="hero-title" data-animate="fadeInUp">
+        <span class="holographic-text">革新的な実績</span>
+      </h1>
+      <p class="hero-subtitle" data-animate="fadeInUp" data-animate-delay="0.2">
+        量子技術とAIの融合が生み出すイノベーション
+      </p>
+    </div>
+    
+    <!-- Floating Stats -->
+    <div class="floating-stats">
+      <div class="stat-orb" data-value="150">
+        <span class="stat-number">0</span>
+        <span class="stat-label">プロジェクト</span>
+      </div>
+      <div class="stat-orb" data-value="98">
+        <span class="stat-number">0</span>
+        <span class="stat-label">満足度 %</span>
+      </div>
+      <div class="stat-orb" data-value="42">
+        <span class="stat-number">0</span>
+        <span class="stat-label">特許取得</span>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Filter Controls -->
+  <section class="filter-section">
+    <div class="container">
+      <div class="filter-controls" data-animate="fadeInUp">
+        <button class="filter-btn active" data-filter="all">
+          <span class="btn-text">すべて</span>
+          <div class="btn-glow"></div>
+        </button>
+        <button class="filter-btn" data-filter="ai">
+          <span class="btn-text">AI/ML</span>
+          <div class="btn-glow"></div>
+        </button>
+        <button class="filter-btn" data-filter="quantum">
+          <span class="btn-text">量子技術</span>
+          <div class="btn-glow"></div>
+        </button>
+        <button class="filter-btn" data-filter="infrastructure">
+          <span class="btn-text">インフラ</span>
+          <div class="btn-glow"></div>
+        </button>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Major Projects -->
+  <section class="projects-section">
+    <div class="container">
+      <h2 class="section-title" data-animate="fadeInUp">主要プロジェクト</h2>
+      
+      <div class="projects-grid">
+        <!-- AI Smart City Project -->
+        <div class="project-card" data-category="ai" data-animate="flipIn">
+          <div class="card-inner">
+            <div class="card-front glassmorphism">
+              <div class="project-icon">
+                <div class="icon-3d" data-icon="city"></div>
+              </div>
+              <h3>AI駆動型スマートシティプラットフォーム</h3>
+              <p class="project-type">AI/IoT統合システム</p>
+              <div class="project-stats">
+                <span>効率向上: 45%</span>
+                <span>CO2削減: 30%</span>
+              </div>
+            </div>
+            <div class="card-back glassmorphism">
+              <h4>プロジェクト詳細</h4>
+              <p>都市インフラの最適化を実現するAIプラットフォーム。リアルタイムデータ分析により、交通流、エネルギー消費、公共サービスを統合管理。</p>
+              <ul class="tech-stack">
+                <li>TensorFlow</li>
+                <li>Kubernetes</li>
+                <li>IoT Hub</li>
+                <li>Edge Computing</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Quantum Computing Project -->
+        <div class="project-card" data-category="quantum" data-animate="flipIn" data-animate-delay="0.1">
+          <div class="card-inner">
+            <div class="card-front glassmorphism">
+              <div class="project-icon">
+                <div class="icon-3d" data-icon="quantum"></div>
+              </div>
+              <h3>量子コンピューティング最適化システム</h3>
+              <p class="project-type">量子アルゴリズム</p>
+              <div class="project-stats">
+                <span>計算速度: 1000x</span>
+                <span>精度: 99.9%</span>
+              </div>
+            </div>
+            <div class="card-back glassmorphism">
+              <h4>プロジェクト詳細</h4>
+              <p>量子アニーリングを活用した組み合わせ最適化問題の解決。物流、金融、創薬分野での実用化に成功。</p>
+              <ul class="tech-stack">
+                <li>Qiskit</li>
+                <li>D-Wave</li>
+                <li>VQE Algorithm</li>
+                <li>Quantum ML</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Neural Medical Project -->
+        <div class="project-card" data-category="ai" data-animate="flipIn" data-animate-delay="0.2">
+          <div class="card-inner">
+            <div class="card-front glassmorphism">
+              <div class="project-icon">
+                <div class="icon-3d" data-icon="medical"></div>
+              </div>
+              <h3>ニューラルネットワーク医療診断支援</h3>
+              <p class="project-type">医療AI</p>
+              <div class="project-stats">
+                <span>診断精度: 96%</span>
+                <span>時間短縮: 80%</span>
+              </div>
+            </div>
+            <div class="card-back glassmorphism">
+              <h4>プロジェクト詳細</h4>
+              <p>深層学習による画像診断支援システム。MRI、CT、X線画像から高精度で病変を検出し、医師の診断を支援。</p>
+              <ul class="tech-stack">
+                <li>PyTorch</li>
+                <li>DICOM</li>
+                <li>3D CNN</li>
+                <li>Explainable AI</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Timeline Section -->
+  <section class="timeline-section">
+    <div class="container">
+      <h2 class="section-title" data-animate="fadeInUp">イノベーションの軌跡</h2>
+      
+      <div class="quantum-timeline">
+        <div class="timeline-path">
+          <svg class="timeline-svg" viewBox="0 0 100 500">
+            <path class="quantum-path" d="M50,0 Q20,125 50,250 Q80,375 50,500" />
+          </svg>
+        </div>
+        
+        <div class="timeline-events">
+          <div class="timeline-event" data-year="2024" data-animate="fadeInLeft">
+            <div class="event-content glassmorphism">
+              <h3>DX認定事業者認定</h3>
+              <p>経済産業省よりDX認定事業者として認定を取得</p>
+            </div>
+            <div class="event-orb"></div>
+          </div>
+          
+          <div class="timeline-event right" data-year="2023" data-animate="fadeInRight">
+            <div class="event-content glassmorphism">
+              <h3>イノベーション大賞2023受賞</h3>
+              <p>量子・AI融合技術で最優秀賞を受賞</p>
+            </div>
+            <div class="event-orb"></div>
+          </div>
+          
+          <div class="timeline-event" data-year="2023" data-animate="fadeInLeft">
+            <div class="event-content glassmorphism">
+              <h3>ISO27001認証取得</h3>
+              <p>情報セキュリティマネジメントシステム認証</p>
+            </div>
+            <div class="event-orb"></div>
+          </div>
+          
+          <div class="timeline-event right" data-year="2022" data-animate="fadeInRight">
+            <div class="event-content glassmorphism">
+              <h3>量子コンピュータ研究所設立</h3>
+              <p>産学連携による研究開発拠点を開設</p>
+            </div>
+            <div class="event-orb"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Awards & Certifications -->
+  <section class="awards-section">
+    <div class="container">
+      <h2 class="section-title" data-animate="fadeInUp">受賞歴・認証</h2>
+      
+      <div class="awards-grid">
+        <div class="award-item" data-animate="rotateIn">
+          <div class="award-badge holographic">
+            <div class="badge-inner">
+              <div class="badge-icon">🏆</div>
+              <h4>Innovation Award</h4>
+              <p>2023</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="award-item" data-animate="rotateIn" data-animate-delay="0.1">
+          <div class="award-badge holographic">
+            <div class="badge-inner">
+              <div class="badge-icon">🛡️</div>
+              <h4>ISO 27001</h4>
+              <p>Certified</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="award-item" data-animate="rotateIn" data-animate-delay="0.2">
+          <div class="award-badge holographic">
+            <div class="badge-inner">
+              <div class="badge-icon">⚡</div>
+              <h4>DX認定</h4>
+              <p>事業者</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="award-item" data-animate="rotateIn" data-animate-delay="0.3">
+          <div class="award-badge holographic">
+            <div class="badge-inner">
+              <div class="badge-icon">🌟</div>
+              <h4>Best AI Solution</h4>
+              <p>2023</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Client Logos -->
+  <section class="clients-section">
+    <div class="container">
+      <h2 class="section-title" data-animate="fadeInUp">信頼される実績</h2>
+      
+      <div class="clients-carousel">
+        <div class="clients-track">
+          <div class="client-logo glassmorphism">
+            <div class="logo-placeholder">TechCorp</div>
+          </div>
+          <div class="client-logo glassmorphism">
+            <div class="logo-placeholder">InnovateLab</div>
+          </div>
+          <div class="client-logo glassmorphism">
+            <div class="logo-placeholder">FutureBank</div>
+          </div>
+          <div class="client-logo glassmorphism">
+            <div class="logo-placeholder">MediTech</div>
+          </div>
+          <div class="client-logo glassmorphism">
+            <div class="logo-placeholder">SmartCity</div>
+          </div>
+          <div class="client-logo glassmorphism">
+            <div class="logo-placeholder">QuantumSoft</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Technical Achievements -->
+  <section class="tech-achievements">
+    <div class="container">
+      <h2 class="section-title" data-animate="fadeInUp">技術的成果</h2>
+      
+      <div class="achievements-grid">
+        <div class="achievement-card glassmorphism" data-animate="fadeInUp">
+          <div class="achievement-icon">📄</div>
+          <h3>42</h3>
+          <p>特許取得</p>
+        </div>
+        
+        <div class="achievement-card glassmorphism" data-animate="fadeInUp" data-animate-delay="0.1">
+          <div class="achievement-icon">📚</div>
+          <h3>128</h3>
+          <p>学術論文発表</p>
+        </div>
+        
+        <div class="achievement-card glassmorphism" data-animate="fadeInUp" data-animate-delay="0.2">
+          <div class="achievement-icon">💻</div>
+          <h3>35</h3>
+          <p>OSS貢献</p>
+        </div>
+        
+        <div class="achievement-card glassmorphism" data-animate="fadeInUp" data-animate-delay="0.3">
+          <div class="achievement-icon">🎯</div>
+          <h3>200+</h3>
+          <p>API公開</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content" data-animate="scaleIn">
+        <h2>次のイノベーションを共に</h2>
+        <p>量子技術とAIの力で、あなたのビジネスを変革します</p>
+        <a href="index.html#contact" class="quantum-btn magnetic">
+          <span class="btn-text">お問い合わせ</span>
+          <div class="btn-bg"></div>
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Quantum Neural. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.159.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.4/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.4/dist/ScrollTrigger.min.js"></script>
+  <script type="module" src="js/achievements.js"></script>
+</body>
+</html>
